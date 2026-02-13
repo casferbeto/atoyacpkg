@@ -5,6 +5,7 @@ import separadoresImg from '../assets/images/separadores.png'
 import singleFaceImg from '../assets/images/single_face.png'
 import cajaAutomotriz from '../assets/images/caja_automotriz.png'
 import contenedorTelescopico from '../assets/images/contenedor_telescopico.png'
+import laminaCorrugada from '../assets/images/laminacorrugada.png'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 const products = [
@@ -42,6 +43,11 @@ const products = [
         title: 'Contenedor con Tapa Telescópica',
         description: 'Contenedor sobre tarima estándar de madera. Solución robusta para el sector automotriz.',
         image: contenedorTelescopico,
+    },
+    {
+        title: 'Lamina corrugada',
+        description: 'Láminas de cartón corrugado de alta resistencia, ideales para protección y embalaje ligero.',
+        image: laminaCorrugada,
     },
 ]
 

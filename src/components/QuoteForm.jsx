@@ -36,7 +36,7 @@ export default function QuoteForm() {
         setStatus('loading')
 
         try {
-            const response = await fetch('https://TU_WEBHOOK_N8N_AQUI', {
+            const response = await fetch('https://n8n.srv1208074.hstgr.cloud/webhook/d90a44fd-5971-4b30-9333-0fac1bc47f62', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
@@ -106,6 +106,10 @@ export default function QuoteForm() {
                                 <input type="text" name="nombre" required value={formData.nombre} onChange={handleChange} placeholder="Nombre completo" className={inputClass} />
                             </div>
                             <div>
+                                <label className={labelClass}>Cargo</label>
+                                <input type="text" name="cargo" value={formData.cargo} onChange={handleChange} placeholder="Puesto / Cargo" className={inputClass} />
+                            </div>
+                            <div>
                                 <label className={labelClass}>Industria *</label>
                                 <select name="industria" required value={formData.industria} onChange={handleChange} className={inputClass}>
                                     <option value="">Seleccionar industria</option>
@@ -124,6 +128,10 @@ export default function QuoteForm() {
                             <div>
                                 <label className={labelClass}>Email *</label>
                                 <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="Email" className={inputClass} />
+                            </div>
+                            <div>
+                                <label className={labelClass}>Tipo de Caja</label>
+                                <input type="text" name="tipoCaja" value={formData.tipoCaja} onChange={handleChange} placeholder="Regular, Suajada, Agrícola..." className={inputClass} />
                             </div>
                             <div>
                                 <label className={labelClass}>Volumen Estimado</label>

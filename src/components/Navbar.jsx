@@ -52,14 +52,14 @@ export default function Navbar() {
     return (
         <>
             <nav
-                className={`fixed top-0 left-0 right-0 z-[100] navbar-glass transition-all duration-300 ${scrolled ? 'navbar-scrolled py-2' : 'py-4'}`}
+                className="fixed top-0 left-0 right-0 z-[100] navbar-glass py-3"
             >
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
                     <a href="#hero" className="flex items-center gap-2">
                         <img
                             src={logoImg}
                             alt="Atoyac PKG"
-                            className={`h-9 w-auto transition-all duration-300 ${scrolled ? '' : 'brightness-0'}`}
+                            className="h-9 w-auto"
                         />
                     </a>
 

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import equipoImg from '../assets/images/equipo_industrial.png'
+import cajasImg from '../assets/images/cajascorrugadas.png'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 function AnimatedCounter({ target, suffix = '', duration = 2000 }) {
@@ -55,40 +56,97 @@ export default function About() {
             </div>
 
             {/* Header */}
-            <div className="tesla-header-text reveal reveal-up">
+            <div className="tesla-header-text reveal reveal-up mb-12">
                 <h2 className="text-[40px] md:text-[48px] font-500 tracking-[-0.6px] text-[#171a20] mb-2">
-                    Sobre Atoyac PKG
+                    NOSOTROS
                 </h2>
                 <p className="text-sm md:text-base font-400 text-[#393c41]">
                     Más de 40 años forjando alianzas estratégicas
                 </p>
             </div>
 
-            {/* Content (Special Tesla grid for stats) */}
-            <div className="tesla-content">
-                <div className="grid md:grid-cols-2 gap-12 max-w-2xl w-full px-6">
-                    <div className="text-center reveal reveal-left">
-                        <div className="text-5xl font-500 text-[#171a20] tracking-tight">
-                            <AnimatedCounter target={40} suffix="+" />
-                        </div>
-                        <div className="text-sm text-[#393c41] mt-2 font-400">Años de experiencia industrial</div>
+            {/* Content (Image Left + Stats Right) */}
+            <div className="tesla-content w-full max-w-6xl px-6">
+                <div className="flex flex-col md:flex-row items-center gap-12 w-full">
+                    {/* Left: Image */}
+                    <div className="w-full md:w-1/2 reveal reveal-left flex justify-center md:justify-end">
+                        <img
+                            src={cajasImg}
+                            alt="Cajas de cartón corrugado"
+                            className="w-full max-w-md h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                        />
                     </div>
-                    <div className="text-center reveal reveal-right">
-                        <div className="text-5xl font-500 text-[#171a20] tracking-tight">
-                            <AnimatedCounter target={100} suffix="%" />
+
+                    {/* Right: Stats Grid */}
+                    <div className="w-full md:w-1/2 reveal reveal-right">
+                        <div className="flex flex-col gap-6 w-full">
+                            {[
+                                {
+                                    target: 40,
+                                    suffix: '+',
+                                    label: 'Años de experiencia',
+                                    icon: (
+                                        <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    )
+                                },
+                                {
+                                    target: 100,
+                                    suffix: '%',
+                                    label: 'Compromiso con la calidad',
+                                    icon: (
+                                        <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    )
+                                },
+                                {
+                                    target: 200,
+                                    suffix: '+',
+                                    label: 'Clientes satisfechos',
+                                    icon: (
+                                        <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    )
+                                }
+                            ].map((stat, index) => (
+                                <div
+                                    key={index}
+                                    className="flex items-center gap-6 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-[#167FA3]"
+                                >
+                                    <div className="flex-shrink-0 w-16 h-16 bg-[#167FA3] rounded-full flex items-center justify-center shadow-md">
+                                        {stat.icon}
+                                    </div>
+                                    <div className="text-left">
+                                        <div className="text-4xl font-700 text-[#171a20] tracking-tight leading-none mb-1">
+                                            <AnimatedCounter target={stat.target} suffix={stat.suffix} />
+                                        </div>
+                                        <div className="text-sm md:text-base font-500 text-[#393c41] uppercase tracking-wide">
+                                            {stat.label}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                        <div className="text-sm text-[#393c41] mt-2 font-400">Compromiso con la calidad total</div>
                     </div>
                 </div>
             </div>
 
             {/* CTAs */}
-            <div className="tesla-cta-container reveal reveal-up" style={{ animationDelay: '0.4s' }}>
+            <div className="tesla-cta-container reveal reveal-up mt-12">
                 <a
                     href="#productos"
-                    className="btn-tesla-secondary w-full sm:w-auto"
+                    className="btn-tesla-primary w-full sm:w-auto shadow-md"
                 >
                     Explorar Productos
+                </a>
+                <a
+                    href="#cotizacion"
+                    className="btn-tesla-secondary w-full sm:w-auto"
+                >
+                    Solicitar Cotización
                 </a>
             </div>
         </section>

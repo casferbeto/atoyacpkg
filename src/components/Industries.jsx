@@ -1,55 +1,30 @@
-import logisticaImg from '../assets/images/logistica_pallets.png'
+import bannerImg from '../assets/images/banerdeindustrias.png'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 const sectors = [
     {
         name: 'Agrícola',
-        icon: (
-            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-            </svg>
-        ),
+        path: 'M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z'
     },
     {
         name: 'Automotriz',
-        icon: (
-            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-3.78a1.5 1.5 0 01-.36-2.09l3.78-5.1a1.5 1.5 0 012.09-.36l5.1 3.78a1.5 1.5 0 01.36 2.09l-3.78 5.1a1.5 1.5 0 01-2.09.36z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 17.25l-1.5 1.5" />
-            </svg>
-        ),
+        path: 'M11.42 15.17l-5.1-3.78a1.5 1.5 0 01-.36-2.09l3.78-5.1a1.5 1.5 0 012.09-.36l5.1 3.78a1.5 1.5 0 01.36 2.09l-3.78 5.1a1.5 1.5 0 01-2.09.36z M6.75 17.25l-1.5 1.5'
     },
     {
         name: 'Textil',
-        icon: (
-            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
-            </svg>
-        ),
+        path: 'M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z'
     },
     {
         name: 'Industrial',
-        icon: (
-            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5z" />
-            </svg>
-        ),
+        path: 'M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5z'
     },
     {
         name: 'Alimenticio',
-        icon: (
-            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
-            </svg>
-        ),
+        path: 'M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z'
     },
     {
         name: 'Especializado',
-        icon: (
-            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
-            </svg>
-        ),
+        path: 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z'
     },
 ]
 
@@ -59,21 +34,21 @@ export default function Industries() {
     return (
         <section
             id="sectores"
-            className="tesla-section"
+            className="tesla-section isolate"
             ref={ref}
         >
             {/* Background Image */}
-            <div className="absolute inset-0 -z-10">
+            <div className="absolute inset-0 -z-10 overflow-hidden">
                 <img
-                    src={logisticaImg}
-                    alt=""
-                    className="w-full h-full object-cover"
+                    src={bannerImg}
+                    alt="Fondo sectores industriales"
+                    className="w-full h-full object-cover object-center opacity-40"
                 />
-                <div className="absolute inset-0 bg-white/70" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/90" />
             </div>
 
             {/* Header */}
-            <div className="tesla-header-text reveal reveal-up">
+            <div className="tesla-header-text reveal reveal-up mb-16">
                 <h2 className="text-[40px] md:text-[48px] font-500 tracking-[-0.6px] text-[#171a20] mb-2">
                     Sectores Estratégicos
                 </h2>
@@ -83,17 +58,26 @@ export default function Industries() {
             </div>
 
             {/* Content (Icons Grid) */}
-            <div className="tesla-content">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 w-full max-w-2xl px-6">
+            <div className="tesla-content w-full">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl px-6">
                     {sectors.map((sector, index) => (
                         <div
                             key={index}
-                            className={`reveal reveal-up stagger-${index + 1} flex flex-col items-center gap-4 group cursor-default`}
+                            className={`reveal reveal-up stagger-${index + 1} flex flex-col items-center justify-center gap-4 p-8 group cursor-default
+                                      bg-white/80 backdrop-blur-md rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-white/50`}
                         >
-                            <div className="text-[#171a20] group-hover:scale-110 transition-transform duration-300">
-                                {sector.icon}
+                            <div className="text-[#167FA3] p-4 bg-blue-50/50 rounded-full group-hover:bg-[#167FA3] group-hover:text-white transition-colors duration-500">
+                                <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    {sector.path.includes(' M') ? (
+                                        sector.path.split(' M').map((d, i) => (
+                                            <path key={i} strokeLinecap="round" strokeLinejoin="round" d={i === 0 ? d : 'M' + d} />
+                                        ))
+                                    ) : (
+                                        <path strokeLinecap="round" strokeLinejoin="round" d={sector.path} />
+                                    )}
+                                </svg>
                             </div>
-                            <span className="text-sm font-500 text-[#393c41] tracking-tight">
+                            <span className="text-lg font-600 text-[#171a20] tracking-tight">
                                 {sector.name}
                             </span>
                         </div>
