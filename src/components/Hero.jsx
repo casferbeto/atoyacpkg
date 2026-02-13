@@ -1,4 +1,4 @@
-import plantaImg from '../assets/images/planta_industrial.png'
+import backImg from '../assets/images/backofboxes.png'
 import useScrollReveal from '../hooks/useScrollReveal'
 import logoImg from '../assets/images/logo_atoyac_sinfondo.png'
 
@@ -11,14 +11,15 @@ export default function Hero() {
             className="tesla-section pt-32 pb-16" // Increased top padding for logo space
             ref={ref}
         >
-            {/* Background image with light overlay */}
-            <div className="absolute inset-0 -z-10">
+            {/* Background image with bottom gradient for integration */}
+            <div className="absolute inset-0 -z-10 overflow-hidden">
                 <img
-                    src={plantaImg}
+                    src={backImg}
                     alt=""
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-bottom"
                 />
-                <div className="absolute inset-0 bg-white/60" />
+                {/* Bottom gradient for seamless section transition */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
             </div>
 
             {/* Header Content */}
@@ -26,14 +27,11 @@ export default function Hero() {
                 <img
                     src={logoImg}
                     alt="Atoyac PKG Logo"
-                    className="h-24 md:h-32 mb-8 animate-float drop-shadow-lg"
+                    className="h-72 md:h-96 mb-12 animate-float drop-shadow-xl"
                 />
-                <h1 className="text-[40px] md:text-[56px] font-500 tracking-[-1.2px] text-[#171a20] leading-tight mb-2">
+                <h1 className="text-[20px] md:text-[28px] font-500 tracking-[-0.6px] text-[#171a20] leading-tight mb-32 whitespace-nowrap">
                     Soluciones en Cartón Corrugado
                 </h1>
-                <p className="text-sm md:text-base font-400 text-[#393c41] tracking-tight">
-                    Sectores Industriales de Alta Exigencia
-                </p>
             </div>
 
             {/* CTAs at Bottom */}

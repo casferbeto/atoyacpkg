@@ -565,10 +565,4 @@ body {
 
 .bg-diamond-pattern {
   background-color: #ffffff;
-  background-image:
-    repeating-linear-gradient(45deg, rgba(0, 159, 218, 0.5) 0, rgba(0, 159, 218, 0.5) 2px, transparent 2px, transparent 50%),
-    repeating-linear-gradient(-45deg, rgba(0, 159, 218, 0.5) 0, rgba(0, 159, 218, 0.5) 2px, transparent 2px, transparent 50%);
-  background-size: 80px 80px;
-  background-position: center;
-  background-attachment: fixed;
 }
