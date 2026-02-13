@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" fill="none">
+  <!-- Diamond shape - top -->
+  <polygon points="200,20 280,100 200,100 120,100" fill="#1E88A8"/>
+  <!-- Diamond shape - left -->
+  <polygon points="120,100 200,100 200,180 120,180" fill="#167FA3"/>
+  <!-- Diamond shape - right -->
+  <polygon points="200,100 280,100 280,180 200,180" fill="#0F6B8A"/>
+  <!-- Diamond shape - bottom left -->
+  <polygon points="120,100 160,60 200,100 160,140" fill="#1399BD"/>
+  <!-- Diamond shape - bottom right -->
+  <polygon points="200,100 240,60 280,100 240,140" fill="#167FA3"/>
+  <!-- Inner white diamonds -->
+  <polygon points="152,72 180,100 152,128 124,100" fill="white"/>
+  <polygon points="248,72 276,100 248,128 220,100" fill="white"/>
+  <!-- Center overlap -->
+  <polygon points="172,60 200,32 228,60 200,88" fill="#0D5A73"/>
+  <polygon points="172,140 200,112 228,140 200,168" fill="#1E88A8"/>
+  
+  <!-- Text "Atoyac" -->
+  <text x="200" y="240" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="62" fill="#1a1a1a">Atoyac</text>
+  <!-- Text "PKG" -->
+  <text x="200" y="295" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="52" fill="#167FA3" letter-spacing="4">PKG</text>
+</svg>

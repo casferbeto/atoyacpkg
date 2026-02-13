@@ -1,0 +1,101 @@
+import cajaRegular from '../assets/images/caja_regular.png'
+import cajaTroquelada from '../assets/images/caja_troquelada.png'
+import cajaAgricola from '../assets/images/caja_agricola.png'
+import separadoresImg from '../assets/images/separadores.png'
+import singleFaceImg from '../assets/images/single_face.png'
+import cajaAutomotriz from '../assets/images/caja_automotriz.png'
+import contenedorTelescopico from '../assets/images/contenedor_telescopico.png'
+import useScrollReveal from '../hooks/useScrollReveal'
+
+const products = [
+    {
+        title: 'Caja Regular Ranurada',
+        description: 'Empaque estándar RSC para uso industrial general. Resistencia óptima para almacenamiento y transporte.',
+        image: cajaRegular,
+    },
+    {
+        title: 'Cajas Troqueladas',
+        description: 'Empaques con cortes estructurales personalizados según dimensiones y requerimientos específicos.',
+        image: cajaTroquelada,
+    },
+    {
+        title: 'Cajas para Productos del Campo',
+        description: 'Empaques ventilados de alta resistencia para el sector agrícola con flujo de aire garantizado.',
+        image: cajaAgricola,
+    },
+    {
+        title: 'Separadores',
+        description: 'Divisiones internas para organización y protección individual de piezas dentro del empaque.',
+        image: separadoresImg,
+    },
+    {
+        title: 'Single Face',
+        description: 'Planchas de cartón corrugado de una cara, ideales para envolver y proteger productos frágiles.',
+        image: singleFaceImg,
+    },
+    {
+        title: 'Cajas para Industria Automotriz',
+        description: 'Empaques reforzados para componentes automotrices con resistencias controladas.',
+        image: cajaAutomotriz,
+    },
+    {
+        title: 'Contenedor con Tapa Telescópica',
+        description: 'Contenedor sobre tarima estándar de madera. Solución robusta para el sector automotriz.',
+        image: contenedorTelescopico,
+    },
+]
+
+export default function Products() {
+    const ref = useScrollReveal()
+
+    return (
+        <section
+            id="productos"
+            className="tesla-section"
+            ref={ref}
+        >
+            {/* Header */}
+            <div className="tesla-header-text reveal reveal-up">
+                <h2 className="text-[40px] md:text-[48px] font-500 tracking-[-0.6px] text-[#171a20] mb-2">
+                    Productos de Excelencia
+                </h2>
+                <p className="text-sm md:text-base font-400 text-[#393c41]">
+                    Diseñados para resistir y proteger
+                </p>
+            </div>
+
+            {/* Content (Grid) */}
+            <div className="tesla-content">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-6 w-full max-h-[60vh] overflow-y-auto scrollbar-hide py-4">
+                    {products.map((product, index) => (
+                        <div
+                            key={index}
+                            className={`reveal reveal-up stagger-${(index % 4) + 1} flex flex-col gap-2`}
+                        >
+                            <div className="aspect-[4/3] rounded-sm overflow-hidden bg-gray-100">
+                                <img
+                                    src={product.image}
+                                    alt={product.title}
+                                    className="w-full h-full object-cover grayscale-[0.5] hover:grayscale-0 transition-all duration-700"
+                                />
+                            </div>
+                            <h3 className="text-xs md:text-sm font-500 text-[#171a20]">
+                                {product.title}
+                            </h3>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="tesla-cta-container reveal reveal-up" style={{ animationDelay: '0.4s' }}>
+                <a
+                    href="#cotizacion"
+                    className="btn-tesla-primary w-full sm:w-auto"
+                >
+                    Solicitar Cotización
+                </a>
+            </div>
+        </section>
+    )
+}
