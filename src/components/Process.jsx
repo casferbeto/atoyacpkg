@@ -1,4 +1,4 @@
-import maquinariaImg from '../assets/images/maquinaria_corrugado.png'
+import maquinariaImg from '../assets/images/maquinaria_corrugado.webp'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 const steps = [

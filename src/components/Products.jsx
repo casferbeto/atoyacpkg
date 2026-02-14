@@ -1,11 +1,11 @@
-import cajaRegular from '../assets/images/caja_regular.png'
-import cajaTroquelada from '../assets/images/caja_troquelada.png'
-import cajaAgricola from '../assets/images/caja_agricola.png'
-import separadoresImg from '../assets/images/separadores.png'
-import singleFaceImg from '../assets/images/single_face.png'
-import cajaAutomotriz from '../assets/images/caja_automotriz.png'
-import contenedorTelescopico from '../assets/images/contenedor_telescopico.png'
-import laminaCorrugada from '../assets/images/laminacorrugada.png'
+import cajaRegular from '../assets/images/caja_regular.webp'
+import cajaTroquelada from '../assets/images/caja_troquelada.webp'
+import cajaAgricola from '../assets/images/caja_agricola.webp'
+import separadoresImg from '../assets/images/separadores.webp'
+import laminaDobleImg from '../assets/images/lamina_doble_corrugado.webp'
+import cajaAutomotriz from '../assets/images/caja_automotriz.webp'
+import contenedorTelescopico from '../assets/images/contenedor_telescopico.webp'
+import laminaCorrugada from '../assets/images/laminacorrugada.webp'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 const products = [
@@ -30,9 +30,9 @@ const products = [
         image: separadoresImg,
     },
     {
-        title: 'Single Face',
-        description: 'Planchas de cartón corrugado de una cara, ideales para envolver y proteger productos frágiles.',
-        image: singleFaceImg,
+        title: 'Lámina Doble Corrugado',
+        description: 'Estructura de doble flauta para máxima resistencia estructural y protección superior.',
+        image: laminaDobleImg,
     },
     {
         title: 'Cajas para Industria Automotriz',
@@ -45,7 +45,7 @@ const products = [
         image: contenedorTelescopico,
     },
     {
-        title: 'Lamina corrugada',
+        title: 'Lámina corrugada',
         description: 'Láminas de cartón corrugado de alta resistencia, ideales para protección y embalaje ligero.',
         image: laminaCorrugada,
     },

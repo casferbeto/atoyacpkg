@@ -1,6 +1,6 @@
-import backImg from '../assets/images/backofboxes.png'
+import backImg from '../assets/images/backofboxes.webp'
 import useScrollReveal from '../hooks/useScrollReveal'
-import logoImg from '../assets/images/logo_atoyac_sinfondo.png'
+import logoImg from '../assets/images/logo_atoyac_sinfondo.webp'
 
 export default function Hero() {
     const ref = useScrollReveal()
@@ -30,7 +30,7 @@ export default function Hero() {
                     className="h-72 md:h-96 mb-12 animate-float drop-shadow-xl"
                 />
                 <h1 className="text-[20px] md:text-[28px] font-500 tracking-[-0.6px] text-[#171a20] leading-tight whitespace-nowrap">
-                    Soluciones en Cartón Corrugado
+                    Soluciones en Cajas de Cartón Corrugado para la Industria
                 </h1>
             </div>
 

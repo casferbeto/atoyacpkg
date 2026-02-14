@@ -1,4 +1,4 @@
-import bannerImg from '../assets/images/banerdeindustrias.png'
+import bannerImg from '../assets/images/banerdeindustrias.webp'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 const sectors = [

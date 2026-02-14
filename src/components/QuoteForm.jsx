@@ -56,8 +56,8 @@ export default function QuoteForm() {
         }
     }
 
-    const inputClass = 'w-full px-5 py-4 bg-[#f4f4f4] rounded-[4px] text-[#171a20] placeholder-[#393c41]/50 border-none transition-all duration-300 text-base focus:ring-2 focus:ring-[#3e6ae1]/20'
-    const labelClass = 'block text-xs font-600 text-[#393c41] mb-2 uppercase tracking-wider'
+    const inputClass = 'w-full px-6 py-5 bg-[#f4f4f4] rounded-[4px] text-[#171a20] placeholder-[#393c41]/50 border-none transition-all duration-300 text-lg focus:ring-2 focus:ring-[#3e6ae1]/20'
+    const labelClass = 'block text-sm font-600 text-[#393c41] mb-2 uppercase tracking-wider'
 
     return (
         <section

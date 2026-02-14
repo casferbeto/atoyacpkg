@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-import equipoImg from '../assets/images/equipo_industrial.png'
-import cajasImg from '../assets/images/cajascorrugadas.png'
+import equipoImg from '../assets/images/equipo_industrial.webp'
+import cajasImg from '../assets/images/cajascorrugadas.webp'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 function AnimatedCounter({ target, suffix = '', duration = 2000 }) {

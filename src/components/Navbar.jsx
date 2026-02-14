@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import logoImg from '../assets/images/logo_atoyac_sinfondo.png'
+import logoImg from '../assets/images/logo_atoyac_sinfondo.webp'
 
 const navLinks = [
     { label: 'Inicio', href: '#hero' },
