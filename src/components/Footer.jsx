@@ -23,7 +23,7 @@ export default function Footer() {
                             </svg>
                         </div>
                         <span className="text-sm font-500 text-gray-300 group-hover:text-white">
-                            +52 (222) 320 6102
+                            +52 (222) 670 6354
                         </span>
                     </a>
 
